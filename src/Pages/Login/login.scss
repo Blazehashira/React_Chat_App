@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 body {
   margin: 0;
   .login {
@@ -15,6 +17,14 @@ body {
       min-height: 600px;
       overflow: hidden;
 
+      @include mobile {
+        width: 90%;
+      }
+
+      @include large-screen {
+        flex-direction: column;
+      }
+
       .left {
         padding: 50px;
         flex: 1;
@@ -29,10 +39,27 @@ body {
         gap: 30px;
         color: aliceblue;
 
+        @include mobile {
+          padding: 25px;
+        }
+
+        @include large-screen {
+          padding: 40px;
+        }
+
         h1 {
           font-size: 100px;
           line-height: 90px;
           margin: 0;
+
+          @include mobile {
+            font-size: 40px;
+            line-height: 60px;
+          }
+
+          @include large-screen {
+            font-size: 50px;
+          }
         }
 
         p {

@@ -50,3 +50,9 @@ $themes: (
     @content;
   }
 }
+
+@mixin large-screen {
+  @media (max-width: 1450px) {
+    @content;
+  }
+}
